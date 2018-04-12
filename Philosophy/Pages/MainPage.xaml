@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Philosophy.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Philosophy"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Ф" Foreground="#00bfff" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="и" Foreground="#EA4335" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="л" Foreground="#fbbc05" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="о" Foreground="#fbbc05" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="с" Foreground="#fbbc05" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="о" Foreground="#fbbc05" FontWeight="Bold" FontSize="33" />
+                <TextBlock Text="ф" Foreground="#00bfff" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="и" Foreground="#34A853" FontWeight="Bold" FontSize="33"/>
+                <TextBlock Text="я" Foreground="#EA4335" FontWeight="Bold" FontSize="33"/>
+            </StackPanel>
+            <Rectangle Fill="Transparent" Height="3"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="SearchBox" BorderBrush="#A8A8A8" Text="СТРУКТУРА" FontWeight="Light" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderThickness="1" Grid.Column="0"/>
+                <Border Grid.Column="1" BorderBrush="#A8A8A8" BorderThickness="0,1,1,1">
+                    <Grid Height="30" Width="30" MouseDown="Grid_MouseDown">
+                        <Rectangle Fill="#00bfff"/>
+                        <TextBlock Text="🔍" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
